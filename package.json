@@ -1,6 +1,6 @@
 {
   "name": "redux-typescript-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A single function that returns a reducer, action creators",
   "keywords": [
     "redux",
