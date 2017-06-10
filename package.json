@@ -12,6 +12,7 @@
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "typings": "lib/index.d.ts",
   "repository": "Zalastax/redux-typescript-module",
   "scripts": {
     "rimraf": "rimraf lib es",
