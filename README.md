@@ -14,17 +14,17 @@ There's just one function: `createModule(initalState, handler) -> {reducer, acti
 
 `handler` is an object where the keys are action names
 and the values are action handlers. For example:
-```js
+```ts
 const counter = createModule(0, {
-  increment: (state, action) => state + 1,
-  decrement: (state, action) => state - 1
+  increment: (state: number, action: Action<number>) => state + action.payload,
+  decrement: (state: number, action: Action<number>) => state - action.payload
 })
 ```
 #### Returns
 `createModule` returns an object with two things:
 
 `actions` is an object with action creators. 
-for example: `counter.actions.increment()` will return 
-`{ type: 'increment', payload: {} }`
+for example: `counter.actions.increment(5)` will return 
+`{ type: 'increment', payload: 5 }`
 
 `reducer` is regular reducer that you can pass to the redux store or to `combineReducers`
